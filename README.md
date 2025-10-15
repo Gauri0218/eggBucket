@@ -17,21 +17,15 @@ It tracks **Opening Stock**, **Closing Stock**, **PhonePe / Cash Payments**, and
 ---
 
 ## 🧩 Project Structure
-
----
-
-## 🛠️ How to Run Locally
-
-```bash
-# Clone the repository
-git clone https://github.com/Gauri0218/eggBucket.git
-
-# Go to the backend folder
-cd eggBucket/backend
-
-# Install dependencies
-npm install
-
-# Start the server
-node server.js
-
+eggBucket/
+├── backend/
+│ ├── public/
+│ │ ├── index.html
+│ │ ├── script.js
+│ │ ├── styles.css
+│ │ └── .gitignore
+│ ├── server.js
+│ ├── package.json
+│ ├── package-lock.json
+│ └── .env
+└── .gitignore
