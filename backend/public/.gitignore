@@ -1,7 +1,11 @@
-# ignore big folders and secret files
+# dependencies
 node_modules/
+
+# local data / storage / secrets
 storage/
 .env
 service-account.json
+
+# mac / windows noise
 .DS_Store
 npm-debug.log*

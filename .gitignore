@@ -1,0 +1,14 @@
+﻿# Node
+node_modules/
+npm-debug.log*
+yarn-error.log
+package-lock.json
+# local env
+.env
+# storage (data files)
+/backend/storage/
+# VSCode
+.vscode/
+# OS files
+.DS_Store
+Thumbs.db
