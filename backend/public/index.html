@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EggBucket — Dashboard</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-decor">
+    <!-- big orange sun circle and tray illustration -->
+    <div class="sun" aria-hidden="true"></div>
+    <div class="tray-art" aria-hidden="true">
+      <!-- simple stylized egg tray using inline SVG for crispness -->
+      <svg viewBox="0 0 360 240" class="tray-svg" preserveAspectRatio="xMidYMid meet" role="img">
+        <defs>
+          <linearGradient id="trayGrad" x1="0" x2="1">
+            <stop offset="0" stop-color="#f4f5f6"/>
+            <stop offset="1" stop-color="#e9e9ea"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="40" rx="12" ry="12" width="340" height="140" fill="url(#trayGrad)" stroke="#d8d8d8"/>
+        <!-- rows of eggs -->
+        <g transform="translate(20,46)">
+          <!-- 5 cols x 4 rows -->
+          <g fill="#fff" stroke="#eee">
+            <!-- generate by hand for simplicity -->
+            <ellipse cx="28" cy="18" rx="18" ry="22"/>
+            <ellipse cx="80" cy="18" rx="18" ry="22"/>
+            <ellipse cx="132" cy="18" rx="18" ry="22"/>
+            <ellipse cx="184" cy="18" rx="18" ry="22"/>
+            <ellipse cx="236" cy="18" rx="18" ry="22"/>
+
+            <ellipse cx="28" cy="60" rx="18" ry="22"/>
+            <ellipse cx="80" cy="60" rx="18" ry="22"/>
+            <ellipse cx="132" cy="60" rx="18" ry="22"/>
+            <ellipse cx="184" cy="60" rx="18" ry="22"/>
+            <ellipse cx="236" cy="60" rx="18" ry="22"/>
+
+            <ellipse cx="28" cy="102" rx="18" ry="22"/>
+            <ellipse cx="80" cy="102" rx="18" ry="22"/>
+            <ellipse cx="132" cy="102" rx="18" ry="22"/>
+            <ellipse cx="184" cy="102" rx="18" ry="22"/>
+            <ellipse cx="236" cy="102" rx="18" ry="22"/>
+
+            <ellipse cx="28" cy="144" rx="18" ry="22"/>
+            <ellipse cx="80" cy="144" rx="18" ry="22"/>
+            <ellipse cx="132" cy="144" rx="18" ry="22"/>
+            <ellipse cx="184" cy="144" rx="18" ry="22"/>
+            <ellipse cx="236" cy="144" rx="18" ry="22"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="top">
+      <div class="branding">
+        <div class="logo-mark" aria-hidden="true">
+          <!-- stylized bucket mark (circle + inner egg) -->
+          <svg viewBox="0 0 80 60" width="56" height="42" aria-hidden="true">
+            <g>
+              <rect x="0" y="8" rx="10" ry="10" width="80" height="40" fill="#f7f0e6" stroke="#e89a2e"/>
+              <circle cx="22" cy="20" r="8" fill="#ffb84a"/>
+              <path d="M12 10 Q22 0 32 10" fill="#ff7a00" opacity="0.06"/>
+            </g>
+          </svg>
+        </div>
+        <div class="brand-text">EggBucket</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="panel">
+        <div class="panel-title">
+          <h2>Daily Entries</h2>
+          <div class="right-controls">
+            <label>Show saved
+              <div class="inline">
+                <input id="searchDate" type="date" />
+                <select id="searchLocation"></select>
+                <button id="showSaved" class="btn">Show Saved</button>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table id="locationsTable" class="table">
+            <thead>
+              <tr>
+                <th style="width:180px">Date</th>
+                <th>Location</th>
+                <th>Opening Stock</th>
+                <th>Qty (tray units)</th>
+                <th>Closing Stock</th>
+                <th>NECC ₹/egg (date-level)</th>
+                <th>PhonePe ₹</th>
+                <th>Cash ₹</th>
+                <th>Total Amount</th>
+                <th>Profit / Loss</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="panel-actions">
+          <button id="applyNecc" class="btn">Apply NECC to all rows</button>
+          <button id="saveDate" class="btn primary">Save All for Date</button>
+        </div>
+
+        <div class="hint">Tip: Pick a date in the first row, enter NECC once and apply. Then save.</div>
+      </section>
+    </main>
+
+    <!-- footer removed as requested -->
+
+  </div>
+
+  <!-- bucket animation: many small eggs falling into bucket -->
+  <div class="bucket-zone" aria-hidden="true">
+    <div class="bucket">
+      <div class="bucket-label">EGG BUCKET</div>
+    </div>
+    <div class="falling-eggs" id="fallingEggs">
+      <!-- eggs are created in CSS via HTML elements for easy animation -->
+      <div class="drop egg1">EGG</div>
+      <div class="drop egg2">EGG</div>
+      <div class="drop egg3">EGG</div>
+      <div class="drop egg4">EGG</div>
+      <div class="drop egg5">EGG</div>
+      <div class="drop egg6">EGG</div>
+      <div class="drop egg7">EGG</div>
+      <div class="drop egg8">EGG</div>
+    </div>
+  </div>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>

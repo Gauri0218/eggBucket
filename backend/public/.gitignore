@@ -1,0 +1,7 @@
+# ignore big folders and secret files
+node_modules/
+storage/
+.env
+service-account.json
+.DS_Store
+npm-debug.log*

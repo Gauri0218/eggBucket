@@ -1,0 +1,36 @@
+{
+  "date": "2025-10-13",
+  "necc": "5.54",
+  "rows": [
+    {
+      "date": "2025-10-13",
+      "location": "AECS LAYOUT",
+      "opening": "457",
+      "qty": 3045,
+      "closing": "458",
+      "neccRate": "5.54",
+      "phonepe": 4741,
+      "cash": 755
+    },
+    {
+      "date": "2025-10-13",
+      "location": "BANDEPALYA",
+      "opening": "4841",
+      "qty": 4000,
+      "closing": "4589",
+      "neccRate": "5.54",
+      "phonepe": 4545,
+      "cash": 441
+    },
+    {
+      "date": "2025-10-13",
+      "location": "HOSA ROAD",
+      "opening": "7474",
+      "qty": 4000,
+      "closing": "54556",
+      "neccRate": "5.54",
+      "phonepe": 47945,
+      "cash": 482
+    }
+  ]
+}
